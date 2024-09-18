@@ -1,4 +1,4 @@
-# Demo Modus
+# Demo: Modus
 ## Aufgabe 1:
 Erstelle einen neuen Herausgeber "Demo" mit dem Präfix "demo"
 Erstelle eine neue Lösung "Demo" die alle Anpassungen enthält
