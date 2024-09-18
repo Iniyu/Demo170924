@@ -1,0 +1,9 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/ServerSide/.vs/ServerSide/FileContentIndex
+/ServerSide/ContactAddress/obj
+/ServerSide/CrmPackage/obj/Debug
+/ServerSide/ContactAddress/bin
+/ServerSide/CrmPackage/bin/Debug
