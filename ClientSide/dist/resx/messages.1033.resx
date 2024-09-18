@@ -1,0 +1,14 @@
+<root>
+<data name="count_contacts">
+<value>There are x accounts associated with this company.</value>
+</data>
+<data name="count_contacts_one">
+<value>There is x account associated with this company.</value>
+</data>
+<data name="spinner_countContact">
+<value>Please wait</value>
+</data>
+<data name="alert_dialog_confirm">
+<value>Close</value>
+</data>
+</root>

@@ -1,0 +1,14 @@
+<root>
+<data name="count_contacts">
+<value>Dieser Firma sind x Kontakte zugeordnet.</value>
+</data>
+<data name="count_contacts_one">
+<value>Dieser Firma ist x Kontakt zugeordnet.</value>
+</data>
+<data name="spinner_countContact">
+<value>Bitte Warten</value>
+</data>
+<data name="alert_dialog_confirm">
+<value>Schließen</value>
+</data>
+</root>
