@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F8ECAA6-4026-490B-8C9B-D604CD8E158E}</ProjectGuid>
+    <ProjectTypeGuids>{4C25E9B5-9FA6-436c-8E19-B395D2A65FAF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContactAddress.ContactAddress</RootNamespace>
+    <AssemblyName>ContactAddress.ContactAddress</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>-->
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);GetTfmPublishedFiles</TargetsForTfmSpecificBuildOutput>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>ContactAddress.ContactAddress</PackageId>
+    <IsPackable>True</IsPackable>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageOutputPath>bin\outputPackages</PackageOutputPath>
+    <PackageTags>plugin</PackageTags>
+    <Authors>Placeholder</Authors>
+    <Description>
+			Placeholder
+		</Description>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MyKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <HintPath>..\..\..\..\..\program files\microsoft visual studio\2022\community\common7\ide\extensions\y054w0bh.za1\Resources\CoreTools\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy">
+      <HintPath>..\..\..\..\..\program files\microsoft visual studio\2022\community\common7\ide\extensions\y054w0bh.za1\Resources\CoreTools\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.2.0" />
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.*" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataverseContext.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="EntityOptionSetEnum.cs" />
+    <Compile Include="Helper\ContactHelper.cs" />
+    <Compile Include="Helper\EntityExtension.cs" />
+    <Compile Include="OptionSets\ActivityFileAttachment_ObjectCode.cs" />
+    <Compile Include="OptionSets\ActivityPointer_ActivityTypeCode.cs" />
+    <Compile Include="OptionSets\ActivityPointer_DeliveryPriorityCode.cs" />
+    <Compile Include="OptionSets\Activity_MailMergeTypeCode.cs" />
+    <Compile Include="OptionSets\Activity_TypeCode.cs" />
+    <Compile Include="OptionSets\AddListCampaign.cs" />
+    <Compile Include="OptionSets\AIOperationOverrideType.cs" />
+    <Compile Include="OptionSets\AIPluginSubtype.cs" />
+    <Compile Include="OptionSets\AIPluginType.cs" />
+    <Compile Include="OptionSets\AllocationType.cs" />
+    <Compile Include="OptionSets\ApplicationAccess.cs" />
+    <Compile Include="OptionSets\ApplicationBasedAccessList_Cloud.cs" />
+    <Compile Include="OptionSets\BookAbleResourceCharacteristicType.cs" />
+    <Compile Include="OptionSets\BotComponentCollectionSharingRoleType.cs" />
+    <Compile Include="OptionSets\BotComponentReusePolicy.cs" />
+    <Compile Include="OptionSets\BotSharingRoleTypes.cs" />
+    <Compile Include="OptionSets\BudgetStatus.cs" />
+    <Compile Include="OptionSets\BulkEmail_Recipient.cs" />
+    <Compile Include="OptionSets\BulkEmail_Recipients.cs" />
+    <Compile Include="OptionSets\Capability.cs" />
+    <Compile Include="OptionSets\CascadeCaseClosurePreference.cs" />
+    <Compile Include="OptionSets\ChatBotLanguage.cs" />
+    <Compile Include="OptionSets\ComponentState.cs" />
+    <Compile Include="OptionSets\ComponentType.cs" />
+    <Compile Include="OptionSets\ConnectionRole_Category.cs" />
+    <Compile Include="OptionSets\ConnectorType.cs" />
+    <Compile Include="OptionSets\ConvertRule_ChannelActivity.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_Deactivate_Status.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_Option.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_Options.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_Qualify_Lead_Options.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_Sales_Entity_Type.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_To_Lead_Disqualify_Status.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_To_Lead_Option.cs" />
+    <Compile Include="OptionSets\Convert_Campaign_Response_To_Lead_Qualify_Status.cs" />
+    <Compile Include="OptionSets\CopilotExampleQuestionTKnowledgeType.cs" />
+    <Compile Include="OptionSets\CustomApiFieldType.cs" />
+    <Compile Include="OptionSets\Delete_RecurringAppointmentMaster.cs" />
+    <Compile Include="OptionSets\DependencyType.cs" />
+    <Compile Include="OptionSets\EmailServerProfile_AuthenticationProtocol.cs" />
+    <Compile Include="OptionSets\EntityType.cs" />
+    <Compile Include="OptionSets\Field_Security_Permission_ReadUnmasked.cs" />
+    <Compile Include="OptionSets\Field_Security_Permission_Type.cs" />
+    <Compile Include="OptionSets\FlipSwitch_Options.cs" />
+    <Compile Include="OptionSets\FullSyncState.cs" />
+    <Compile Include="OptionSets\Goal_FiscalPeriod.cs" />
+    <Compile Include="OptionSets\Goal_FiscalYear.cs" />
+    <Compile Include="OptionSets\IncidentResolutionFormType.cs" />
+    <Compile Include="OptionSets\IncidentUpdateAfterResolution.cs" />
+    <Compile Include="OptionSets\Incident_CaseOriginCode.cs" />
+    <Compile Include="OptionSets\InitialCommunication.cs" />
+    <Compile Include="OptionSets\IsInherited.cs" />
+    <Compile Include="OptionSets\KnowledgeArticle_ExpirationState.cs" />
+    <Compile Include="OptionSets\Lead_SalesStage.cs" />
+    <Compile Include="OptionSets\MainFewShotEntityType.cs" />
+    <Compile Include="OptionSets\MakerFewShotSqlCorrectness.cs" />
+    <Compile Include="OptionSets\Metric_GoalType.cs" />
+    <Compile Include="OptionSets\MobileOfflineEnabledEntities.cs" />
+    <Compile Include="OptionSets\MsDynCe_ContentState.cs" />
+    <Compile Include="OptionSets\MsdynCrm_AddToCalendarChoiceOptions.cs" />
+    <Compile Include="OptionSets\MsdynCrm_BackgroundSizeType.cs" />
+    <Compile Include="OptionSets\MsdynCrm_BackgroundWidthType.cs" />
+    <Compile Include="OptionSets\MsdynCrm_BorderStyleType.cs" />
+    <Compile Include="OptionSets\MsdynCrm_FitType.cs" />
+    <Compile Include="OptionSets\MsdynCrm_ImagePickerAssetsProviders.cs" />
+    <Compile Include="OptionSets\MsdynCrm_TargetType.cs" />
+    <Compile Include="OptionSets\MsDynMkt_EventMetadataIntegrationStatus.cs" />
+    <Compile Include="OptionSets\MsDynMkt_EventMetadataState.cs" />
+    <Compile Include="OptionSets\MsDynMkt_EventMetadataStatus.cs" />
+    <Compile Include="OptionSets\MsDynMkt_EventParameterType.cs" />
+    <Compile Include="OptionSets\MsDynMkt_Feature_State_Option_Set.cs" />
+    <Compile Include="OptionSets\MsDynMkt_MessageDesignation.cs" />
+    <Compile Include="OptionSets\MsDynMkt_PicklistSupportedLanguages.cs" />
+    <Compile Include="OptionSets\MsDynMkt_PlaceholderType.cs" />
+    <Compile Include="OptionSets\Msdyn_ActionType.cs" />
+    <Compile Include="OptionSets\Msdyn_AdjustmentStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_AgentDisplayName.cs" />
+    <Compile Include="OptionSets\Msdyn_AgentInputLanguage.cs" />
+    <Compile Include="OptionSets\Msdyn_AgreementBookingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_AgreementInvoiceStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_AgreementSystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_AmountMethod.cs" />
+    <Compile Include="OptionSets\Msdyn_AnalyticsReportType.cs" />
+    <Compile Include="OptionSets\Msdyn_ApiVersionOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_ApplicationType.cs" />
+    <Compile Include="OptionSets\Msdyn_ApplyStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_AppModule.cs" />
+    <Compile Include="OptionSets\Msdyn_AssignmentConfigurationStepType.cs" />
+    <Compile Include="OptionSets\Msdyn_AttachmentType.cs" />
+    <Compile Include="OptionSets\Msdyn_AutoCreateInvoices.cs" />
+    <Compile Include="OptionSets\Msdyn_AutoUpdateBookingTravelType.cs" />
+    <Compile Include="OptionSets\Msdyn_BasePresenceStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_BgJobStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_BgJobWorkItemType.cs" />
+    <Compile Include="OptionSets\Msdyn_BillingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_BillingType.cs" />
+    <Compile Include="OptionSets\Msdyn_BookAbleResourceType.cs" />
+    <Compile Include="OptionSets\Msdyn_BookingJournalType.cs" />
+    <Compile Include="OptionSets\Msdyn_BookingSource.cs" />
+    <Compile Include="OptionSets\Msdyn_BookingStatusOptimizationMethod.cs" />
+    <Compile Include="OptionSets\Msdyn_BookingSystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_CapacityFormat.cs" />
+    <Compile Include="OptionSets\Msdyn_ChangeSource.cs" />
+    <Compile Include="OptionSets\Msdyn_ChannelMessageContextPartType.cs" />
+    <Compile Include="OptionSets\Msdyn_ChannelMessagePartType.cs" />
+    <Compile Include="OptionSets\Msdyn_ChatAnswerType.cs" />
+    <Compile Include="OptionSets\Msdyn_ChatQuestionnaireType.cs" />
+    <Compile Include="OptionSets\Msdyn_CI_Locale.cs" />
+    <Compile Include="OptionSets\Msdyn_ComputationAccuracy.cs" />
+    <Compile Include="OptionSets\Msdyn_ConsoleApplicationNotificationAction.cs" />
+    <Compile Include="OptionSets\Msdyn_ConsoleApplicationParameterRuntimeType.cs" />
+    <Compile Include="OptionSets\Msdyn_ConsultModeType.cs" />
+    <Compile Include="OptionSets\Msdyn_ConversationAccessType.cs" />
+    <Compile Include="OptionSets\Msdyn_ConversationAction_Language_Locale.cs" />
+    <Compile Include="OptionSets\Msdyn_ConversationCharacteristicSource.cs" />
+    <Compile Include="OptionSets\Msdyn_ConversationCharacteristicStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_Conversation_StateCode.cs" />
+    <Compile Include="OptionSets\Msdyn_Conversation_StatusCode.cs" />
+    <Compile Include="OptionSets\Msdyn_CrewMemberType.cs" />
+    <Compile Include="OptionSets\Msdyn_CrewStrategy.cs" />
+    <Compile Include="OptionSets\Msdyn_DailyRecurrence.cs" />
+    <Compile Include="OptionSets\Msdyn_DataflowTemplateState.cs" />
+    <Compile Include="OptionSets\Msdyn_DataLoadConfigStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_DataSetType.cs" />
+    <Compile Include="OptionSets\Msdyn_DatAverseComponentType.cs" />
+    <Compile Include="OptionSets\Msdyn_DecisionRuleSetType.cs" />
+    <Compile Include="OptionSets\Msdyn_DesktopNotificationSettings.cs" />
+    <Compile Include="OptionSets\Msdyn_DesktopNotificationVisibility.cs" />
+    <Compile Include="OptionSets\Msdyn_DeviceEvent.cs" />
+    <Compile Include="OptionSets\Msdyn_DistanceUnit.cs" />
+    <Compile Include="OptionSets\Msdyn_DurationRoundingPolicy.cs" />
+    <Compile Include="OptionSets\Msdyn_EmailTemplateType.cs" />
+    <Compile Include="OptionSets\Msdyn_EnableAppointmentsOption.cs" />
+    <Compile Include="OptionSets\Msdyn_EntitlementAppliesTo.cs" />
+    <Compile Include="OptionSets\Msdyn_EventType.cs" />
+    <Compile Include="OptionSets\Msdyn_ExtensionType.cs" />
+    <Compile Include="OptionSets\Msdyn_ExternalParticipantChannelType.cs" />
+    <Compile Include="OptionSets\Msdyn_FieldServiceAutoNumberingEntities.cs" />
+    <Compile Include="OptionSets\Msdyn_FieldServiceProductType.cs" />
+    <Compile Include="OptionSets\Msdyn_FlaggedStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_Flow_ApprovalResponseOptionsType.cs" />
+    <Compile Include="OptionSets\Msdyn_Flow_ApprovalStage.cs" />
+    <Compile Include="OptionSets\Msdyn_Flow_Approval_Priority.cs" />
+    <Compile Include="OptionSets\Msdyn_Flow_Approval_RequestType.cs" />
+    <Compile Include="OptionSets\Msdyn_GenericType.cs" />
+    <Compile Include="OptionSets\Msdyn_IeRMlModelStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_IeRMlModelTrainingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_ImportConfigType.cs" />
+    <Compile Include="OptionSets\Msdyn_IncludeExclude.cs" />
+    <Compile Include="OptionSets\Msdyn_InspectionResult.cs" />
+    <Compile Include="OptionSets\Msdyn_InspectionStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_IntentSources.cs" />
+    <Compile Include="OptionSets\Msdyn_InventoryJournalType.cs" />
+    <Compile Include="OptionSets\Msdyn_InventoryTransactionType.cs" />
+    <Compile Include="OptionSets\Msdyn_IotAggregation.cs" />
+    <Compile Include="OptionSets\Msdyn_IotFieldDataFormat.cs" />
+    <Compile Include="OptionSets\Msdyn_IotMappingType.cs" />
+    <Compile Include="OptionSets\Msdyn_IotSearchType.cs" />
+    <Compile Include="OptionSets\Msdyn_IotSource.cs" />
+    <Compile Include="OptionSets\Msdyn_JobStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_KPiComputationAccuracy.cs" />
+    <Compile Include="OptionSets\Msdyn_LanguageCodes.cs" />
+    <Compile Include="OptionSets\Msdyn_LeadGradeOptSet.cs" />
+    <Compile Include="OptionSets\Msdyn_LeadScoreTrendOptSet.cs" />
+    <Compile Include="OptionSets\Msdyn_LevelOfImportance.cs" />
+    <Compile Include="OptionSets\Msdyn_LineType.cs" />
+    <Compile Include="OptionSets\Msdyn_LiveWorkItemEventType.cs" />
+    <Compile Include="OptionSets\Msdyn_MessageType.cs" />
+    <Compile Include="OptionSets\Msdyn_MlModelType.cs" />
+    <Compile Include="OptionSets\Msdyn_MlTrainingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_MobileSourceTypes.cs" />
+    <Compile Include="OptionSets\Msdyn_MonthlyRecurrence.cs" />
+    <Compile Include="OptionSets\Msdyn_MonthOfYear.cs" />
+    <Compile Include="OptionSets\Msdyn_Msdyn_UnifiedRoutingRun_Msdyn_RoutingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_NotificationTheme.cs" />
+    <Compile Include="OptionSets\Msdyn_NotificationTypes.cs" />
+    <Compile Include="OptionSets\Msdyn_NTeSource.cs" />
+    <Compile Include="OptionSets\Msdyn_NTeType.cs" />
+    <Compile Include="OptionSets\Msdyn_NumberOfDays.cs" />
+    <Compile Include="OptionSets\Msdyn_NumberOfSearchResults.cs" />
+    <Compile Include="OptionSets\Msdyn_Objective.cs" />
+    <Compile Include="OptionSets\Msdyn_OCAdminMode.cs" />
+    <Compile Include="OptionSets\Msdyn_OCAuthEnabledChannelType.cs" />
+    <Compile Include="OptionSets\Msdyn_OCAuthenticationType.cs" />
+    <Compile Include="OptionSets\Msdyn_OCAuthSettingEndpointRegions.cs" />
+    <Compile Include="OptionSets\Msdyn_OCCallingOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_OCCallSessionEvenTreasons.cs" />
+    <Compile Include="OptionSets\Msdyn_OCCommunicationProvider.cs" />
+    <Compile Include="OptionSets\Msdyn_OCMessageReceiver.cs" />
+    <Compile Include="OptionSets\Msdyn_OCMessageTemplateTrigger.cs" />
+    <Compile Include="OptionSets\Msdyn_OCRichObjectType.cs" />
+    <Compile Include="OptionSets\Msdyn_OCRichObject_Msdyn_Locale.cs" />
+    <Compile Include="OptionSets\Msdyn_OCSiTrainingDataStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_OcSkillIdentMlModelStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_OcSkillIdentMlModelTrainingStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_OCSystemMessageEventType.cs" />
+    <Compile Include="OptionSets\Msdyn_OCSystemMessageType.cs" />
+    <Compile Include="OptionSets\Msdyn_OpportunityGradeOptSet.cs" />
+    <Compile Include="OptionSets\Msdyn_OpportunityScoreTrendOptSet.cs" />
+    <Compile Include="OptionSets\Msdyn_OptimizationStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_OptimizationType.cs" />
+    <Compile Include="OptionSets\Msdyn_OutOfStockOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_OverflowActionType.cs" />
+    <Compile Include="OptionSets\Msdyn_OwnerViewState.cs" />
+    <Compile Include="OptionSets\Msdyn_PanelStateOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_PaneState.cs" />
+    <Compile Include="OptionSets\Msdyn_ParameterType.cs" />
+    <Compile Include="OptionSets\Msdyn_PartyType.cs" />
+    <Compile Include="OptionSets\Msdyn_PaymentType.cs" />
+    <Compile Include="OptionSets\Msdyn_PersonalMessage_LocaleField.cs" />
+    <Compile Include="OptionSets\Msdyn_PersonaSecurityRoleMapping_Msdyn_PersonaType.cs" />
+    <Compile Include="OptionSets\Msdyn_PlaybookActivity_Priority.cs" />
+    <Compile Include="OptionSets\Msdyn_PlaybookActivity_Time.cs" />
+    <Compile Include="OptionSets\Msdyn_PoApprovalStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_PoolType.cs" />
+    <Compile Include="OptionSets\Msdyn_PoShipToType.cs" />
+    <Compile Include="OptionSets\Msdyn_PostConversationSurveyMode.cs" />
+    <Compile Include="OptionSets\Msdyn_PoSystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_PredictiveScoreTrend.cs" />
+    <Compile Include="OptionSets\Msdyn_PredictiveScoringGrade.cs" />
+    <Compile Include="OptionSets\Msdyn_PreferredAgentBackupMode.cs" />
+    <Compile Include="OptionSets\Msdyn_ProductCostOrder.cs" />
+    <Compile Include="OptionSets\Msdyn_ProductServiceStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_PropertyType.cs" />
+    <Compile Include="OptionSets\Msdyn_PurchaseOrderProductStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_QuestionnaireType.cs" />
+    <Compile Include="OptionSets\Msdyn_QueueAssignmentStrategy.cs" />
+    <Compile Include="OptionSets\Msdyn_QueueType.cs" />
+    <Compile Include="OptionSets\Msdyn_QuickNote_Type.cs" />
+    <Compile Include="OptionSets\Msdyn_RangeOfRecurrence.cs" />
+    <Compile Include="OptionSets\Msdyn_RecurOn.cs" />
+    <Compile Include="OptionSets\Msdyn_RecurrenceDay.cs" />
+    <Compile Include="OptionSets\Msdyn_RecurrencePattern.cs" />
+    <Compile Include="OptionSets\Msdyn_Relationship_Cardinality.cs" />
+    <Compile Include="OptionSets\Msdyn_RequirementDependencyType.cs" />
+    <Compile Include="OptionSets\Msdyn_RequirementGroupOrder.cs" />
+    <Compile Include="OptionSets\Msdyn_RequirementStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_ResourceScheduleSource.cs" />
+    <Compile Include="OptionSets\Msdyn_ReviewStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_RmAProcessingAction.cs" />
+    <Compile Include="OptionSets\Msdyn_RmAProductStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_RmASystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_RoutingConfigurationStepType.cs" />
+    <Compile Include="OptionSets\Msdyn_RoutingFailureStage.cs" />
+    <Compile Include="OptionSets\Msdyn_RTvSystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_RuleSetAuthoringMode.cs" />
+    <Compile Include="OptionSets\Msdyn_SalesMotion_Type.cs" />
+    <Compile Include="OptionSets\Msdyn_SaleSplay_Type.cs" />
+    <Compile Include="OptionSets\Msdyn_SchedulingGoal.cs" />
+    <Compile Include="OptionSets\Msdyn_Scope.cs" />
+    <Compile Include="OptionSets\Msdyn_ScreenPopTimeout.cs" />
+    <Compile Include="OptionSets\Msdyn_SequenceStep_Subtype.cs" />
+    <Compile Include="OptionSets\Msdyn_SequenceStep_Type.cs" />
+    <Compile Include="OptionSets\Msdyn_SequenceTemplateSupportedLanguages.cs" />
+    <Compile Include="OptionSets\Msdyn_ServiceAppointmentStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_SessionOutcome.cs" />
+    <Compile Include="OptionSets\Msdyn_SessionTypeOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_SlatyPe.cs" />
+    <Compile Include="OptionSets\Msdyn_SmsProvider.cs" />
+    <Compile Include="OptionSets\Msdyn_SmsTemplate_Category.cs" />
+    <Compile Include="OptionSets\Msdyn_SmsTemplate_Permission.cs" />
+    <Compile Include="OptionSets\Msdyn_SolutionArea_Type.cs" />
+    <Compile Include="OptionSets\Msdyn_SpamType.cs" />
+    <Compile Include="OptionSets\Msdyn_SRoOptions.cs" />
+    <Compile Include="OptionSets\Msdyn_StreamSource.cs" />
+    <Compile Include="OptionSets\Msdyn_SuggestedPriority.cs" />
+    <Compile Include="OptionSets\Msdyn_SuggestionControlType.cs" />
+    <Compile Include="OptionSets\Msdyn_SuggestionType.cs" />
+    <Compile Include="OptionSets\Msdyn_SurveyProvider.cs" />
+    <Compile Include="OptionSets\Msdyn_TargetAudience.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeCostActualsSource.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeEntryGenerationStrategy.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeEntrySourceType.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeEntryStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeEntryType.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeOffRecordStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeRangeType.cs" />
+    <Compile Include="OptionSets\Msdyn_TimestampFrequency.cs" />
+    <Compile Include="OptionSets\Msdyn_TimeTrackerCategoryOptionSet.cs" />
+    <Compile Include="OptionSets\Msdyn_TransactionClassification.cs" />
+    <Compile Include="OptionSets\Msdyn_TransactionTypeCode.cs" />
+    <Compile Include="OptionSets\Msdyn_TravelChargeType.cs" />
+    <Compile Include="OptionSets\Msdyn_TravelTimeType.cs" />
+    <Compile Include="OptionSets\Msdyn_UnifiedRoutingDiagnostic_Msdyn_DiagnosticDataType.cs" />
+    <Compile Include="OptionSets\Msdyn_UnifiedRoutingDiagnostic_Msdyn_RuleType.cs" />
+    <Compile Include="OptionSets\Msdyn_UpgradeStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_UserAuthenticationMode.cs" />
+    <Compile Include="OptionSets\Msdyn_VisitorJourneyType.cs" />
+    <Compile Include="OptionSets\Msdyn_VisualizationConfigType.cs" />
+    <Compile Include="OptionSets\Msdyn_ViVaCopilotType.cs" />
+    <Compile Include="OptionSets\Msdyn_WidgetLanguage.cs" />
+    <Compile Include="OptionSets\Msdyn_WidgetPosition.cs" />
+    <Compile Include="OptionSets\Msdyn_WidgetThemeColor.cs" />
+    <Compile Include="OptionSets\Msdyn_WorkDistributionMode.cs" />
+    <Compile Include="OptionSets\Msdyn_WorkLocation.cs" />
+    <Compile Include="OptionSets\Msdyn_WorkspaceType.cs" />
+    <Compile Include="OptionSets\Msdyn_WorkStartLocationType.cs" />
+    <Compile Include="OptionSets\Msdyn_WOSystemStatus.cs" />
+    <Compile Include="OptionSets\Msdyn_YearlyRecurrence.cs" />
+    <Compile Include="OptionSets\MsDyUsd_EnableTrigger.cs" />
+    <Compile Include="OptionSets\MsFt_DataState.cs" />
+    <Compile Include="OptionSets\MsPp_ColumnPermissionValues.cs" />
+    <Compile Include="OptionSets\Need.cs" />
+    <Compile Include="OptionSets\OfficeDocument_DocumentType.cs" />
+    <Compile Include="OptionSets\OnlineMeetingType.cs" />
+    <Compile Include="OptionSets\OpenAIsChemAversion.cs" />
+    <Compile Include="OptionSets\Opportunity_SalesStage.cs" />
+    <Compile Include="OptionSets\Organization_ApplicationBasedAccessControlMode.cs" />
+    <Compile Include="OptionSets\Organization_SameSiteModeForSessionCookie.cs" />
+    <Compile Include="OptionSets\OrgInsightsConfiguration_LookBack.cs" />
+    <Compile Include="OptionSets\OrgInsightsConfiguration_PlotOption.cs" />
+    <Compile Include="OptionSets\Photo_Resolution.cs" />
+    <Compile Include="OptionSets\PowerBiMashupParameterValueSource.cs" />
+    <Compile Include="OptionSets\PowerPageComponentType.cs" />
+    <Compile Include="OptionSets\PowerPageLanguages.cs" />
+    <Compile Include="OptionSets\PrincipalSyncAttributeMapping_SyncDirection.cs" />
+    <Compile Include="OptionSets\Processstage_Category.cs" />
+    <Compile Include="OptionSets\PurchaseProcess.cs" />
+    <Compile Include="OptionSets\PurchaseTimeFrame.cs" />
+    <Compile Include="OptionSets\QOOIDetail_SkipPriceCalculation.cs" />
+    <Compile Include="OptionSets\QooiProduct_ProductType.cs" />
+    <Compile Include="OptionSets\QooiProduct_PropertiesConfigurationStatus.cs" />
+    <Compile Include="OptionSets\Qooi_PricingErrorCode.cs" />
+    <Compile Include="OptionSets\QOOI_SkipPriceCalculation.cs" />
+    <Compile Include="OptionSets\QuoteCreationMethod.cs" />
+    <Compile Include="OptionSets\RangeEnds_Options.cs" />
+    <Compile Include="OptionSets\RecurrenceRule_MonthOfYear.cs" />
+    <Compile Include="OptionSets\RegistrationStatusType.cs" />
+    <Compile Include="OptionSets\RepeatPattern_Options.cs" />
+    <Compile Include="OptionSets\ResourceType.cs" />
+    <Compile Include="OptionSets\RunDesktopFlowConnectionType.cs" />
+    <Compile Include="OptionSets\SalesOrderCreationMethod.cs" />
+    <Compile Include="OptionSets\SameWeekday_Options.cs" />
+    <Compile Include="OptionSets\SameWeekWeek_Options.cs" />
+    <Compile Include="OptionSets\SearchEntity.cs" />
+    <Compile Include="OptionSets\SecurityRole_IsAutoAssigned.cs" />
+    <Compile Include="OptionSets\Selection_Rule_Criteria.cs" />
+    <Compile Include="OptionSets\Selection_Rule_Quantity.cs" />
+    <Compile Include="OptionSets\Selection_Rule_Sites.cs" />
+    <Compile Include="OptionSets\ServiceAppointment_StartDate.cs" />
+    <Compile Include="OptionSets\ServiceAppointment_StartTime.cs" />
+    <Compile Include="OptionSets\ServiceAppointment_Status.cs" />
+    <Compile Include="OptionSets\ServiceStage.cs" />
+    <Compile Include="OptionSets\SharePointDocumentLocation_LocationType.cs" />
+    <Compile Include="OptionSets\SharePointSite_ServiceType.cs" />
+    <Compile Include="OptionSets\SharePoint_ValidationStatus.cs" />
+    <Compile Include="OptionSets\SharePoint_ValidationStatusReason.cs" />
+    <Compile Include="OptionSets\Sla_SlaEnabledEntities.cs" />
+    <Compile Include="OptionSets\SocialActivity_PostMessageType.cs" />
+    <Compile Include="OptionSets\SocialProfile_Community.cs" />
+    <Compile Include="OptionSets\SynapseLinkDestinationSyncState.cs" />
+    <Compile Include="OptionSets\SynapseLinkEntityMetadataState.cs" />
+    <Compile Include="OptionSets\SynapseLinkEntityPartitionStrategy.cs" />
+    <Compile Include="OptionSets\SynapseLinkEntitySource.cs" />
+    <Compile Include="OptionSets\SynapseLinkEntitySyncState.cs" />
+    <Compile Include="OptionSets\SynapseLinkExternalTableState.cs" />
+    <Compile Include="OptionSets\SynapseLinkProfileEntityType.cs" />
+    <Compile Include="OptionSets\SynapseLinkProfileState.cs" />
+    <Compile Include="OptionSets\SynapseLinkProFiletype.cs" />
+    <Compile Include="OptionSets\SynapseLinkScheduleRecurrenceUnit.cs" />
+    <Compile Include="OptionSets\SynapseLinkScheduleType.cs" />
+    <Compile Include="OptionSets\SynapseLinkSynapseTableCreationState.cs" />
+    <Compile Include="OptionSets\SyncAttributeMapping_SyncDirection.cs" />
+    <Compile Include="OptionSets\SyncStatus.cs" />
+    <Compile Include="OptionSets\TemplateDefaultView.cs" />
+    <Compile Include="OptionSets\WorkflowLog_ObjectTypeCode.cs" />
+    <Compile Include="OptionSets\Workflow_RunAs.cs" />
+    <Compile Include="OptionSets\Workflow_Stage.cs" />
+    <Compile Include="OptionSets\YearlyMonth_Options.cs" />
+    <Compile Include="PluginBase.cs" />
+    <Compile Include="PreOpContactCreate.cs" />
+    <Compile Include="PreOpContactUpdate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MyKey.snk" />
+  </ItemGroup>
+  <Target Name="GetTfmPublishedFiles">
+    <Message Text="GetTfmPublishedFiles from: $(OutputPath)" />
+    <ItemGroup>
+      <BuildOutputInPackage Include="$(OutputPath)\*.*" Exclude="$(OutputPath)\microsoft.*rm.sdk*" />
+    </ItemGroup>
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
